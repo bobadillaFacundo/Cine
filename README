@@ -1,0 +1,7 @@
+0 Create BDD en Postgresql
+1 Create migration (only do this if the model is modified because there is already a migration in the migration folder, follow the execution step)
+npx typeorm migration:generate ./src/migrationsInitialSchema -d ./configuration/data-source.js -o
+change the migration extension from .js to .cjs
+2 Run migration in bdd postgresql (configuration/data-source.js configuration the vars the in .env)
+npx typeorm migration:run -d ./configuration/data-source.js
+migration made
